@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import iOS_Module
 
 struct MainView: View {
     @ObservedObject var viewModel: MainViewModel
     
     @State private var items: [Sample] = []
     @State private var isMenuVisible: Bool = false // 메뉴 가시성을 관리하는 상태 변수
+    
+    let SampleDataManager = DataManager<Sample>()
     
     var body: some View {
         ZStack {
@@ -75,8 +78,7 @@ struct MainView: View {
                                 Sample(id: UUID(), name: "Items2"),
                                 Sample(id: UUID(), name: "Items3")
                             ]
-                            
-                            DataManager.shared.saveItem(sampleItems)
+                            SampleDataManager.saveItem(sampleItems)
                             print("Items saved!")
                         }) {
                             Image(systemName: "square.and.arrow.down")
@@ -87,7 +89,7 @@ struct MainView: View {
 
                         Button(action: {
                             // 샘플 아이템 로드
-                            items = DataManager.shared.loadItem()
+                            items = SampleDataManager.loadItem()
                             print("Items loaded!")
                         }) {
                             Image(systemName: "book")

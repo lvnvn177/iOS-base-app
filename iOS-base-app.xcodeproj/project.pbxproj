@@ -19,9 +19,8 @@
 		71705C932CA0627C00B4F852 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71705C922CA0627C00B4F852 /* SettingViewModel.swift */; };
 		71705C952CA0640400B4F852 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71705C942CA0640400B4F852 /* SecondViewModel.swift */; };
 		71705C992CA0787F00B4F852 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71705C982CA0787F00B4F852 /* Launch Screen.storyboard */; };
-		71705C9C2CA07BFA00B4F852 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71705C9B2CA07BFA00B4F852 /* PushNotificationManager.swift */; };
-		71705C9E2CA1652B00B4F852 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71705C9D2CA1652B00B4F852 /* DataManager.swift */; };
 		71705CA02CA165A600B4F852 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71705C9F2CA165A600B4F852 /* Sample.swift */; };
+		71705CA42CA1906A00B4F852 /* iOS-Module in Frameworks */ = {isa = PBXBuildFile; productRef = 71705CA32CA1906A00B4F852 /* iOS-Module */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +37,6 @@
 		71705C922CA0627C00B4F852 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		71705C942CA0640400B4F852 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 		71705C982CA0787F00B4F852 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		71705C9B2CA07BFA00B4F852 /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
-		71705C9D2CA1652B00B4F852 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		71705C9F2CA165A600B4F852 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71705CA42CA1906A00B4F852 /* iOS-Module in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +71,6 @@
 		71705C742CA05C1B00B4F852 /* iOS-base-app */ = {
 			isa = PBXGroup;
 			children = (
-				71705C9A2CA07B9600B4F852 /* Module */,
 				71705C972CA0784900B4F852 /* Extension */,
 				71705C962CA0781E00B4F852 /* Resources */,
 				71705C832CA05D4F00B4F852 /* Model */,
@@ -139,15 +136,6 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		71705C9A2CA07B9600B4F852 /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				71705C9B2CA07BFA00B4F852 /* PushNotificationManager.swift */,
-				71705C9D2CA1652B00B4F852 /* DataManager.swift */,
-			);
-			name = Module;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,6 +152,9 @@
 			dependencies = (
 			);
 			name = "iOS-base-app";
+			packageProductDependencies = (
+				71705CA32CA1906A00B4F852 /* iOS-Module */,
+			);
 			productName = "iOS-base-app";
 			productReference = 71705C722CA05C1B00B4F852 /* iOS-base-app.app */;
 			productType = "com.apple.product-type.application";
@@ -192,6 +183,9 @@
 				Base,
 			);
 			mainGroup = 71705C692CA05C1B00B4F852;
+			packageReferences = (
+				71705CA22CA1906A00B4F852 /* XCRemoteSwiftPackageReference "iOS-Module" */,
+			);
 			productRefGroup = 71705C732CA05C1B00B4F852 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,13 +216,11 @@
 				71705C912CA060C600B4F852 /* MainViewModel.swift in Sources */,
 				71705CA02CA165A600B4F852 /* Sample.swift in Sources */,
 				71705C952CA0640400B4F852 /* SecondViewModel.swift in Sources */,
-				71705C9C2CA07BFA00B4F852 /* PushNotificationManager.swift in Sources */,
 				71705C8D2CA05EA400B4F852 /* SecondView.swift in Sources */,
 				71705C782CA05C1B00B4F852 /* ContentView.swift in Sources */,
 				71705C932CA0627C00B4F852 /* SettingViewModel.swift in Sources */,
 				71705C892CA05E6E00B4F852 /* SettingView.swift in Sources */,
 				71705C872CA05E0500B4F852 /* TabBarView.swift in Sources */,
-				71705C9E2CA1652B00B4F852 /* DataManager.swift in Sources */,
 				71705C8B2CA05E8000B4F852 /* MainView.swift in Sources */,
 				71705C762CA05C1B00B4F852 /* iOS_base_appApp.swift in Sources */,
 			);
@@ -438,6 +430,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		71705CA22CA1906A00B4F852 /* XCRemoteSwiftPackageReference "iOS-Module" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lvnvn177/iOS-Module.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		71705CA32CA1906A00B4F852 /* iOS-Module */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71705CA22CA1906A00B4F852 /* XCRemoteSwiftPackageReference "iOS-Module" */;
+			productName = "iOS-Module";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71705C6A2CA05C1B00B4F852 /* Project object */;
 }
