@@ -57,7 +57,7 @@ class PushNotificationManager: NSObject, UNUserNotificationCenterDelegate {
     
     // Handle foreground notifications
    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) { // foreground 상태, 알람 표시
-       completionHandler([.alert, .sound])
+       completionHandler([.banner, .sound])
    }
    
    // Handle notification tap or interaction
@@ -66,4 +66,23 @@ class PushNotificationManager: NSObject, UNUserNotificationCenterDelegate {
        print("User tapped notification with info: \(userInfo)")
        completionHandler()
    }
+    
+    func scheduleLocalNotification(title: String, body: String, sound: UNNotificationSound, timeInterval: TimeInterval = 5) {
+        
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+        content.sound = sound
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Failed to schedule local notification: \(error.localizedDescription)")
+            } else {
+                print("Local notificaiton scheduled: \(title)")
+            }
+        }
+    }
 }
