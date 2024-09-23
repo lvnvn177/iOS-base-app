@@ -20,6 +20,8 @@
 		71705C952CA0640400B4F852 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71705C942CA0640400B4F852 /* SecondViewModel.swift */; };
 		71705C992CA0787F00B4F852 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71705C982CA0787F00B4F852 /* Launch Screen.storyboard */; };
 		71705C9C2CA07BFA00B4F852 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71705C9B2CA07BFA00B4F852 /* PushNotificationManager.swift */; };
+		71705C9E2CA1652B00B4F852 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71705C9D2CA1652B00B4F852 /* DataManager.swift */; };
+		71705CA02CA165A600B4F852 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71705C9F2CA165A600B4F852 /* Sample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		71705C942CA0640400B4F852 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 		71705C982CA0787F00B4F852 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		71705C9B2CA07BFA00B4F852 /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
+		71705C9D2CA1652B00B4F852 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		71705C9F2CA165A600B4F852 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		71705C832CA05D4F00B4F852 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				71705C9F2CA165A600B4F852 /* Sample.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				71705C9B2CA07BFA00B4F852 /* PushNotificationManager.swift */,
+				71705C9D2CA1652B00B4F852 /* DataManager.swift */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71705C912CA060C600B4F852 /* MainViewModel.swift in Sources */,
+				71705CA02CA165A600B4F852 /* Sample.swift in Sources */,
 				71705C952CA0640400B4F852 /* SecondViewModel.swift in Sources */,
 				71705C9C2CA07BFA00B4F852 /* PushNotificationManager.swift in Sources */,
 				71705C8D2CA05EA400B4F852 /* SecondView.swift in Sources */,
@@ -221,6 +228,7 @@
 				71705C932CA0627C00B4F852 /* SettingViewModel.swift in Sources */,
 				71705C892CA05E6E00B4F852 /* SettingView.swift in Sources */,
 				71705C872CA05E0500B4F852 /* TabBarView.swift in Sources */,
+				71705C9E2CA1652B00B4F852 /* DataManager.swift in Sources */,
 				71705C8B2CA05E8000B4F852 /* MainView.swift in Sources */,
 				71705C762CA05C1B00B4F852 /* iOS_base_appApp.swift in Sources */,
 			);
